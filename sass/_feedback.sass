@@ -1,0 +1,84 @@
+.feedback
+	&_items
+		display: grid
+		grid-template-columns: repeat(16, 1fr)
+	&_left
+		grid-column: span 8
+		background-color: #ffddd5
+		padding-left: 90px
+		padding-top: 125px
+		padding-bottom: 170px
+		padding-right: 100px
+	&_text
+		font-size: 36px
+		line-height: 1.4
+		margin: 0
+		margin-bottom: 50px
+	&_name
+		font-size: 36px
+		font-weight: 100
+	&_right
+		grid-column: span 8
+		background: url('../img/feedback_img.jpg') center no-repeat
+		background-size: cover
+	.slick-dots
+		bottom: -70px
+		text-align: left
+
+	.slick-dots li
+		width: auto
+		margin-right: 10px
+		&:last-child
+			margin-right: 0
+	.slick-dots li button::before
+		font-size: 64px
+		opacity: 1
+		color: transparent
+		border: 1px solid #777
+		border-radius: 50%
+		font-size: 0
+		width: 10px
+		height: 10px
+	.slick-dots li button:hover::before
+		color: #777
+	.slick-dots li.slick-active button::before
+		color: transparent
+		opacity: 1
+		color: #777
+		background-color: #777
+
+@media (max-width: 991.98px)
+	.feedback
+		&_left
+			grid-column: span 16
+		&_right
+			order: -1
+			grid-column: span 16
+			min-height: 500px
+			background-size: cover
+			border: 2px solid #ffddd5
+
+@media (max-width: 767.98px)
+	.feedback
+		&_left
+			padding: 50px
+			padding-bottom: 120px
+		&_text
+			font-size: 24px
+			margin-bottom: 30px
+		&_name
+			font-size: 32px
+		.slick-dots
+			bottom: -70px
+
+@media (max-width: 480px)
+	.feedback
+		&_left
+			padding: 30px
+			padding-bottom: 80px
+		&_name
+			font-size: 24px
+		&_text
+			font-size: 20px
+		.slick-dots
+			bottom: -50px
